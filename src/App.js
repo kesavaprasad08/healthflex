@@ -16,6 +16,7 @@ const getData = async(latitude,longitude) =>{
         const response =await fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&apikey=PgLU36npx9imxHdueIN060cGVUnNSoKQ`,
           { method: "GET", headers: { accept: "application/json" } })
           const data = await  response.json()
+          console.log(data)
           setData(data)
     }
     catch(err){
