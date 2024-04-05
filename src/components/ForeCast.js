@@ -7,7 +7,7 @@ const Forecast = (props) => {
 
   const finalDate = `${day}-${month}-${year}`;
   return (
-    <div className=" bg-light p-2 m-2 d-flex flex-column align-items-center ">
+    <div className=" w-100 bg-light p-2 m-2 d-flex flex-column align-items-center border-bottom border-dark ">
       <div>Date : {finalDate}</div>
       <div>Temperature: {data.temperatureAvg}°C</div>
       <div>Apparent Temperature: {data.temperatureApparentAvg}°C</div>

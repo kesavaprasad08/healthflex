@@ -21,7 +21,7 @@ const WeatherForecastData = (prop) => {
 
   return (
     <div className="w-50 bg-light p-2 m-2 d-flex flex-column align-items-center ">
-      Weather Forecast Data
+      <h4> Weather Forecast Data</h4>
       <div>
         <Button
           className="m-2"
