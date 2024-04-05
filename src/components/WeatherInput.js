@@ -11,18 +11,17 @@ const WeatherInput = (props) => {
     setLongitude(e.target.value);
   };
   const submitHandler = () => {
-    props.onFetchData(latitude,longitude)
+    props.onFetchData(latitude, longitude);
   };
 
   const currentLocationHandler = () => {
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position =>{
-            let {latitude,longitude}=position.coords;
-            props.onFetchData(latitude,longitude)
-        })
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        let { latitude, longitude } = position.coords;
+        props.onFetchData(latitude, longitude);
+      });
     }
   };
-  
 
   return (
     <div className="w-50 bg-light p-2 m-2 d-flex flex-column align-items-center ">
@@ -50,14 +49,13 @@ const WeatherInput = (props) => {
         ></input>
       </div>
       <div className="d-flex">
-      <Button className="mx-2" onClick={currentLocationHandler}>
-      Search for Current Location 
-    </Button>   
-      <Button className="" onClick={submitHandler}>
-        Search
-      </Button>
-      
-    </div>
+        <Button className="mx-2" onClick={currentLocationHandler}>
+          Search for Current Location
+        </Button>
+        <Button className="" onClick={submitHandler}>
+          Search
+        </Button>
+      </div>
     </div>
   );
 };
